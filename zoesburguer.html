@@ -1,0 +1,1269 @@
+<!DOCTYPE html><head></head><body><script type="text/javascript"> let WapkaSiteAPI = {"apikey": "84745:tcqvqnj7epgkn9sa8r1esso19n"} </script><script async type="text/javascript" src="//adstook.com/wapka_lib.js"></script><!DOCTYPE html>
+<html lang="es">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoe´s Burguer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    const searchContainer = document.querySelector('.search-input-box');
+const inputSearch = searchContainer.querySelector('input');
+const boxSuggestions = document.querySelector(
+    '.container-suggestions'
+);
+
+const searchLink = document.querySelector('a');
+
+inputSearch.onkeyup = e => {
+    let userData = e.target.value;
+    let emptyArray = [];
+
+    if (userData) {
+        emptyArray = suggestions.filter(data => {
+            return data
+                .toLocaleLowerCase()
+                .startsWith(userData.toLocaleLowerCase());
+        });
+
+        emptyArray = emptyArray.map(data => {
+            return (data = `<li>${data}</li>`);
+        });
+        searchContainer.classList.add('active');
+        showSuggestions(emptyArray);
+
+        let allList = boxSuggestions.querySelectorAll('li');
+
+        allList.forEach(li => {
+            li.setAttribute('onclick', 'select(this)');
+        });
+    } else {
+        searchContainer.classList.remove('active');
+    }
+};
+
+function select(element) {
+    let selectUserData = element.textContent;
+    inputSearch.value = selectUserData;
+
+    searchLink.href = `https://www.google.com/search?q=${inputSearch.value}`;
+    searchContainer.classList.remove('active');
+}
+
+const showSuggestions = list => {
+    let listData;
+
+    if (!list.length) {
+        userValue = inputSearch.value;
+        listData = `<li>${userValue}</li>`;
+    } else {
+        listData = list.join(' ');
+    }
+    boxSuggestions.innerHTML = listData;
+};
+
+</script>
+
+
+<! --------------------------->
+
+<!-- BOTON DE WHATSAP -------------------------------------------------->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=51953329711&text=Hola! Quisiera hacer un pedido..." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+<br>
+</a>
+
+<!-- ESTILOS DEL BOTON DEL WHATSAP------------------------------------------------------>
+<style type="text/css">
+    p {
+        font-size: 20px;
+        color: black;
+    }
+    .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.float:hover {
+    text-decoration: none;
+    color: #25d366;
+    background-color:#fff;
+}
+
+.my-float{
+    margin-top:16px;
+}
+</style>
+
+
+    <!-- SECCION INICIO -->
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+                <div class="logo">
+                    <img src="https://i.ibb.co/Hgz6bn3/IMG-20240514-WA0015.jpg" width="100px">
+                    <h1>Zoe´s Burguer</h1>
+                    <a id="llamar2" href="tel:+51953329711"><i class="fa-solid fa-phone"></i></a> llamar +51 953 329 711
+                    <br>
+                    <p id="direccion">Jr. José Olaya - Barrios Altos<br>Nueva Cajamarca - Rioja - San Martin</p>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="#inicio" onclick="seleccionar()">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sabores" onclick="seleccionar()">
+                                <i class="fa-solid fa-ice-cream"></i>
+                                <span>Sabores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#platos" onclick="seleccionar()">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Que Ofrecemos</span>
+                            </a></li>
+                        <li>
+                            <a href="#blog" onclick="seleccionar()">
+                                <i class="fa-solid fa-pen"></i>
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contacto" onclick="seleccionar()">
+                                <i class="fa-solid fa-comments"></i>
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="social">
+ 
+                        <a href="tel:+5195332"><i class="fa-solid fa-phone"></i> Llamar</a>
+                    
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a> 
+                </div>
+                <div class="nav-responsive" id="bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": false, "autoPlay": true}'>
+                <div class="gallery-cell" >
+                    <img src="https://i.ibb.co/frn9Cs3/hero-background.jpg" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://images.pexels.com/photos/3616956/pexels-photo-3616956.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://images.pexels.com/photos/2299981/pexels-photo-2299981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+                <div class="gallery-cell">
+                    <img src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                </div>
+            </div>
+            <div class="info">
+                <h2> </h2>
+                <p></p>
+                <button></button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECCION SABORES -->
+    <section id="sabores">
+        <h2>Sabores</h2>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="https://www.miguelvergara.com/actualidad/wp-content/uploads/2022/05/hamburguesa.jpg-1200x788.png" alt="Simple">
+                </div>
+                <div class="info">
+                    <h3>Simple <center><p id="precio">S/ 5.00</p></center></h3>
+                    <p>La Mejor Hamburguesa con Carne condimentada y papas fritas o al Hilo.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://tofuu.getjusto.com/orioneat-prod-resized/CcHe9RGyp7KnXoA9J-1200-1200.webp" alt="Chesse">
+                </div>
+                <div class="info">
+                    <h3>Cheese <center><p id="precio">S/ 6.00</p></center></h3>
+                    <p>Hamburguesa con Huevo, Queso Mosarela y Papas fritas o al Hilo.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/a/base-bembos-royal.jpg" alt="Royal">
+                </div>
+                <div class="info">
+                    <h3>Royal <center><p id="precio">S/ 6.50</p></center></h3>
+                    <p>Hamburguesa con carne condimentada, Huevo y Papas fritas o al Hilo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="https://sumerlabs.com/sumer-app-90b8f.appspot.com/product_photos%2F288edb9df292e74c21e8e75d939e2f82%2F794d9b30-b236-11ec-a051-c51a15678625?alt=media&token=79e0a3ae-eb80-444b-9610-0d8041f3615e" alt="Royal Cheese">
+                </div>
+                <div class="info">
+                    <h3>Royal Cheese <center><p id="precio">S/ 7.50</p></center></h3>
+                    <p>Hamburguesa con carne condimentada, Huevo, Queso Mosarela y Papas Fritas o al Hilo.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://i0.wp.com/cocineando.com/wp-content/uploads/2019/04/receta-de-hamburguesa-casera-de-pollo.jpg?fit=1400%2C800&ssl=1" alt="">
+                </div>
+                <div class="info">
+                    <h3>Chori Huevo <center><p id="precio">S/ 7.50</p></center></h3>
+                    <p>Hamburguesa con Chorizo, Huevo y Papas Fritas o al Hilo.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/a/base-bembos-royal.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Chori Burguer <center><p id="precio">S/ 8.50</p></center></h3>
+                    <p>Hamburguesa con Carne condimentada, Chorizo, Huevo y Papas Fritas o al Hilo.</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="https://d31npzejelj8v1.cloudfront.net/media/catalog/product/b/a/base-bembos-royal.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Chori Burguer Cheese <center><p id="precio">S/ 9.50</p></center></h3>
+                    <p>Hamburguesa con Carne condimentada,<br> Chorizo, Huevo, Queso Mosarela y Papas Fritas o al Hilo.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://static.mercadonegro.pe/wp-content/uploads/2019/11/22202556/Screenshot_2-1.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Cervezas <center><p id="precio">S/ 8.00</p></center></h3>
+                    <p>Refrescate con una cerveza bien fría como tu flaca</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="https://tiptop.com.pe/wp-content/uploads/2023/06/Gaseosa-1.5L-scaled.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h3>Gaceosas Personales<center><p id="precio">S/ 1.00</p></center></h3>
+                    <p>Refrescate con una gaceosa de diferentes sabores</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- SECCION PLATOS -->
+    <section id="platos">
+        <h2>Que Ofrecemos</h2>
+
+        <div class="fila">
+            <div class="item">
+                <img src="https://images.pexels.com/photos/551991/pexels-photo-551991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Hamburguesa con carne, huevo y papas fritas</p>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/1552641/pexels-photo-1552641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Hamburguesa con carne, huevo, Queso y papas fritas</p>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/3738730/pexels-photo-3738730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Hamburguesa con carne, Queso y papas fritas</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="item">
+                <img src="https://images.pexels.com/photos/4389683/pexels-photo-4389683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Gaceosas, inka cola, Coca Cola entro otros</p>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/750073/pexels-photo-750073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Hamburguesa con Carne, Huevo y queso derretido + papas Fritas</p>
+            </div>
+            <div class="item">
+                <img src="https://images.pexels.com/photos/1089932/pexels-photo-1089932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <p>Diversa Variedad de Cervezas</p>
+            </div>
+        </div>
+
+        <button></button>
+
+    </section>
+
+    <!-- SECCION BLOG -->
+<br>
+
+    <!-- SECCION CONTACTO Y PIE DE PAGINA -->
+    <section id="contacto">
+        <div class="fila">
+            <div class="col">
+                <h1>Zoe´s Burguer</h1>
+                 <center><a id="llamar" href="tel:+51953329711"><i class="fa-solid fa-phone"></i> Llamar</a></center>
+            </div>
+            <div class="col">
+                <h3>Menú</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#sabores">Sabores</a>
+                <a href="#sabores">Platos</a>
+                <a href="#sabores">Blog</a>
+            </div>
+            <div class="col">
+                <h3>Social Media</h3>
+                <div class="media">
+                    <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
+                </div>
+                <div class="media">
+                    <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Contacto</h3>
+                <input type="text" placeholder="Tu correo">
+                <input type="submit" class="enviar">
+            </div>
+        </div>
+    </section>
+    <hr>
+        <center><sub> © Creado por Programador Web <h2>JHONER FERNANDEZ TUANAMA</h2> Contacto:+51 953 329 711 </sub></center>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+
+<!-- ESTILOS DE LA PAGINA --------------------------------------------->
+
+<style type="text/css">
+
+#direccion {
+    font-size: 15px;
+}
+    
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ***************** */
+/* SECCION I N I C I O */
+/* ***************** */
+#inicio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header{
+    width: 100%;
+}
+#inicio header .contenido-header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+
+}
+#inicio header .contenido-header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#inicio header .contenido-header nav ul{
+    display: flex;
+    list-style: none;
+}
+#inicio header .contenido-header .logo{
+    color: #ff8f46;
+    font-size: 22px;
+}
+#inicio header .contenido-header nav ul li{
+    text-align: center;
+}
+#inicio header .contenido-header nav ul li i{
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+#inicio header .contenido-header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color:#a8a8a8;
+    margin: 0px 20px;
+}
+#inicio header .contenido-header nav ul li:hover i{
+    color: #ff8f46;
+}
+#inicio header .contenido-header .social a{
+    display: inline-block;
+    background-color: #ff8f46;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+#inicio header .contenido-header .social > i{
+    display: inline-block;
+    color: #a8a8a8;
+    margin-left: 10px;
+}
+.nav-responsive{
+   display: none;
+   font-size: 25px;
+   color: #a8a8a8;
+}
+/* Carrusel */
+#inicio .carrusel{
+    position: relative;
+    height: 100%;
+}
+#inicio .carrusel .info{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    text-align: center;
+    color:#fff;
+}
+#inicio .carrusel .info h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script';
+}
+#inicio .carrusel .info button{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#inicio .gallery {
+    width: 100%;
+    height: 100%;
+}
+  
+#inicio .gallery-cell {
+    width: 100%;
+    margin-right: 10px;
+    height: 100%;
+}
+#inicio .gallery-cell img{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+h2 {
+    font-size: 13px;
+    color: red;
+}
+
+#precio {
+    color: blue;
+    font-size: 20px;
+}
+
+
+#llamar {
+    border-radius: 50%;
+    background-color: red;
+}
+
+/* ***************** */
+/* SECCION S A B O R E S */
+/* ***************** */
+#sabores{
+    padding: 50px 0;
+}
+#sabores h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#sabores .fila{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+#sabores .fila .item img{
+    max-width: 80px;
+}
+#sabores .fila .item{
+    display: flex;
+    align-items:center;
+    margin: 20px 10px;
+    padding: 5px;
+}
+#sabores .fila .item:hover{
+    background-color:#ff8f46
+}
+#sabores .fila .item .info{
+    margin-left: 15px;
+    font-size: 14px;
+}
+#sabores button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION P L A T O S */
+/* ***************** */
+#platos h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#platos .fila{
+    max-width: 1100px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+#platos .fila .item{
+    width: 33%;
+    position:relative;
+    overflow: hidden;
+}
+#platos .fila .item img{
+    width: 100%;
+    display: block;
+}
+#platos .fila .item p{
+    position:absolute;
+    width: 100%;
+    bottom: -100%;
+    padding: 10px;
+    background-color:#ff8f46;
+    color: #fff;
+    transition: .5s;
+}
+#platos .fila .item:hover p{
+    bottom: 0;
+}
+#platos button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ***************** */
+/* SECCION B L O G*/
+/* ***************** */
+#blog{
+    padding: 50px 0;
+}
+#blog h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.galeria-blog{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.galeria-blog .gallery-cell .item{
+    display: flex;
+    align-items: center;
+    margin: 0 80px;
+}
+.galeria-blog .gallery-cell img{
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ff8f46   ;
+    margin-right: 30px;
+}
+.galeria-blog .gallery-cell h3{
+    margin-bottom: 7px;
+}
+.galeria-blog .gallery-cell p{
+    color: #a8a8a8;
+    font-style: italic;
+}
+#blog button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION C O N T A C TO */
+/* ***************** */
+#contacto{
+    background-color: #ff8f46;
+    padding: 50px 0;
+}
+#contacto .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#contacto a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    margin-bottom: 3px;
+}
+#contacto a:hover{
+    text-decoration: underline;
+}
+#contacto h3{
+    margin-bottom: 12px;
+}
+#contacto .media{
+    display: flex;
+    align-items: center;
+}
+#contacto .media i{
+    display: block;
+    margin-right: 10px;
+}
+#contacto input{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 30px;
+}
+#contacto .enviar{
+    background-color: #f4721c;
+    color: #fff;
+    width: fit-content;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION RESPONSIVE */
+/* ***************** */
+
+@media screen and (max-width:1070px) {
+    #inicio header .contenido-header .social{
+        display: none;
+    }
+    #inicio header .contenido-header nav{
+        position: static;
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width:700px) {
+    #sabores .fila{
+        display: block;
+    }
+    #platos .fila{
+        display: block;
+        width: 100%;
+    }
+    #platos .fila .item{
+        width: 100%;
+    }
+    #inicio header .contenido-header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    .nav-responsive{
+        display: block;
+    }
+    #inicio header .contenido-header{
+        padding: 20px;
+    }
+    #inicio header .contenido-header nav.responsive{
+        display: block;
+        position:absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        background-color: #252A2E;
+        z-index: 99;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+    #contacto .fila{
+        display: block;
+        text-align: center;
+    }
+    #contacto .fila h3{
+        margin: 20px 0 3px 0;
+    }
+    #contacto .fila .media{
+        display: block;
+    }
+    #contacto .fila input{
+        width: 90%;
+    }
+}
+</style>
+
+
+
+
+
+
+<!----------------------------------SCRIPT DE LA PAGINA---------------------------------------------------------->
+
+<script type="text/javascript">
+    let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("nav").classList ="";
+        menuVisible = false;
+    }else{
+        document.getElementById("nav").classList ="responsive";
+        menuVisible = true;
+    }
+}
+function seleccionar(){
+    //oculto el menu una vez que selecciono una opcion
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!-- ESTILOS DE LA PAGINA --------------------------------------------->
+
+<style type="text/css">
+
+#direccion {
+    font-size: 15px;
+}
+    
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ***************** */
+/* SECCION I N I C I O */
+/* ***************** */
+#inicio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#inicio header{
+    width: 100%;
+}
+#inicio header .contenido-header{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+
+}
+#inicio header .contenido-header nav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#inicio header .contenido-header nav ul{
+    display: flex;
+    list-style: none;
+}
+#inicio header .contenido-header .logo{
+    color: #ff8f46;
+    font-size: 22px;
+}
+#inicio header .contenido-header nav ul li{
+    text-align: center;
+}
+#inicio header .contenido-header nav ul li i{
+    display: block;
+    color: #a8a8a8;
+    margin-bottom: 10px;
+}
+#inicio header .contenido-header nav ul li a{
+    display: block;
+    text-decoration: none;
+    color:#a8a8a8;
+    margin: 0px 20px;
+}
+#inicio header .contenido-header nav ul li:hover i{
+    color: #ff8f46;
+}
+#inicio header .contenido-header .social a{
+    display: inline-block;
+    background-color: #ff8f46;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+#inicio header .contenido-header .social > i{
+    display: inline-block;
+    color: #a8a8a8;
+    margin-left: 10px;
+}
+.nav-responsive{
+   display: none;
+   font-size: 25px;
+   color: #a8a8a8;
+}
+/* Carrusel */
+#inicio .carrusel{
+    position: relative;
+    height: 100%;
+}
+#inicio .carrusel .info{
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    text-align: center;
+    color:#fff;
+}
+#inicio .carrusel .info h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script';
+}
+#inicio .carrusel .info button{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#inicio .gallery {
+    width: 100%;
+    height: 100%;
+}
+  
+#inicio .gallery-cell {
+    width: 100%;
+    margin-right: 10px;
+    height: 100%;
+}
+#inicio .gallery-cell img{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+h2 {
+    font-size: 13px;
+    color: red;
+}
+
+#precio {
+    color: blue;
+    font-size: 20px;
+}
+
+
+#llamar {
+    border-radius: 50%;
+    background-color: red;
+}
+
+/* ***************** */
+/* SECCION S A B O R E S */
+/* ***************** */
+#sabores{
+    padding: 50px 0;
+}
+#sabores h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#sabores .fila{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+}
+#sabores .fila .item img{
+    max-width: 80px;
+}
+#sabores .fila .item{
+    display: flex;
+    align-items:center;
+    margin: 20px 10px;
+    padding: 5px;
+}
+#sabores .fila .item:hover{
+    background-color:#ff8f46
+}
+#sabores .fila .item .info{
+    margin-left: 15px;
+    font-size: 14px;
+}
+#sabores button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION P L A T O S */
+/* ***************** */
+#platos h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+#platos .fila{
+    max-width: 1100px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+}
+#platos .fila .item{
+    width: 33%;
+    position:relative;
+    overflow: hidden;
+}
+#platos .fila .item img{
+    width: 100%;
+    display: block;
+}
+#platos .fila .item p{
+    position:absolute;
+    width: 100%;
+    bottom: -100%;
+    padding: 10px;
+    background-color:#ff8f46;
+    color: #fff;
+    transition: .5s;
+}
+#platos .fila .item:hover p{
+    bottom: 0;
+}
+#platos button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* ***************** */
+/* SECCION B L O G*/
+/* ***************** */
+#blog{
+    padding: 50px 0;
+}
+#blog h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.galeria-blog{
+    max-width: 800px;
+    margin: 50px auto;
+}
+.galeria-blog .gallery-cell .item{
+    display: flex;
+    align-items: center;
+    margin: 0 80px;
+}
+.galeria-blog .gallery-cell img{
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #ff8f46   ;
+    margin-right: 30px;
+}
+.galeria-blog .gallery-cell h3{
+    margin-bottom: 7px;
+}
+.galeria-blog .gallery-cell p{
+    color: #a8a8a8;
+    font-style: italic;
+}
+#blog button{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    border:none;
+    background-color: #ff8f46;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION C O N T A C TO */
+/* ***************** */
+#contacto{
+    background-color: #ff8f46;
+    padding: 50px 0;
+}
+#contacto .fila{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+#contacto a{
+    text-decoration: none;
+    color:#fff;
+    display: block;
+    margin-bottom: 3px;
+}
+#contacto a:hover{
+    text-decoration: underline;
+}
+#contacto h3{
+    margin-bottom: 12px;
+}
+#contacto .media{
+    display: flex;
+    align-items: center;
+}
+#contacto .media i{
+    display: block;
+    margin-right: 10px;
+}
+#contacto input{
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 30px;
+}
+#contacto .enviar{
+    background-color: #f4721c;
+    color: #fff;
+    width: fit-content;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* ***************** */
+/* SECCION RESPONSIVE */
+/* ***************** */
+
+@media screen and (max-width:1070px) {
+    #inicio header .contenido-header .social{
+        display: none;
+    }
+    #inicio header .contenido-header nav{
+        position: static;
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width:700px) {
+    #sabores .fila{
+        display: block;
+    }
+    #platos .fila{
+        display: block;
+        width: 100%;
+    }
+    #platos .fila .item{
+        width: 100%;
+    }
+    #inicio header .contenido-header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    .nav-responsive{
+        display: block;
+    }
+    #inicio header .contenido-header{
+        padding: 20px;
+    }
+    #inicio header .contenido-header nav.responsive{
+        display: block;
+        position:absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 100vh;
+        background-color: #252A2E;
+        z-index: 99;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+
+    #contacto .fila{
+        display: block;
+        text-align: center;
+    }
+    #contacto .fila h3{
+        margin: 20px 0 3px 0;
+    }
+    #contacto .fila .media{
+        display: block;
+    }
+    #contacto .fila input{
+        width: 90%;
+    }
+}
+</style>
+
+
+
+
+
+
+<!----------------------------------SCRIPT DE LA PAGINA---------------------------------------------------------->
+
+<script type="text/javascript">
+    let menuVisible = false;
+//Función que oculta o muestra el menu
+function mostrarOcultarMenu(){
+    if(menuVisible){
+        document.getElementById("nav").classList ="";
+        menuVisible = false;
+    }else{
+        document.getElementById("nav").classList ="responsive";
+        menuVisible = true;
+    }
+}
+function seleccionar(){
+    //oculto el menu una vez que selecciono una opcion
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
+}
+</script>
+
+
+
+
+</body>  
+</html>
